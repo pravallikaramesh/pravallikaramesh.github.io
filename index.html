@@ -107,7 +107,8 @@
     margin: 0 auto;
   }
 
-  .hero-text { padding-top: 2rem; }
+  .hero-text { padding-top: 2rem; order: 1; }
+  .hero-visual { order: 2; }
 
   .hero-eyebrow {
     display: inline-flex;
@@ -942,7 +943,9 @@
   @media (max-width: 900px) {
     nav { padding: 0 1.5rem; }
     .hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 4rem; gap: 3rem; }
-    .hero-visual { display: none; }
+    .hero-visual { display: flex; justify-content: center; }
+    .hero { grid-template-columns: 1fr; padding: 6rem 1.5rem 4rem; gap: 3rem; }
+    .hero-visual > div { transform: scale(0.85); transform-origin: center top; }
     .stats-inner { grid-template-columns: repeat(2, 1fr); }
     .about-section { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
     .industries-header { grid-template-columns: 1fr; gap: 1.5rem; }
